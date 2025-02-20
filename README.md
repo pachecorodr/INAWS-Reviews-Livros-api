@@ -29,7 +29,7 @@ cd INAWS-Reviews-Livros-api
 ```
 ### 3. Construa uma imagem a partir do docker-compose.yaml
 ```bash
-docker-compose -f docker/docker-compose.yaml -p backend_dose_certa up --build
+docker-compose -f docker/docker-compose.yaml -p backend_inaws_reviews_livros up --build
 ```
 ## Rodando as migrações do banco de dados
 
