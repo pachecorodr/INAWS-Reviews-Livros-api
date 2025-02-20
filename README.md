@@ -50,4 +50,4 @@ http://localhost:8000/docs
 
 ## Relacionado 
 
-Segue a API do projeto
+Segue a API do projeto: https://github.com/pachecorodr/INAWS-Reviews-Livros
