@@ -35,7 +35,7 @@ docker-compose -f docker/docker-compose.yaml -p backend_inaws_reviews_livros up 
 
 ### 1. Após subir os containers, aplique as migrações para garantir que o banco esteja atualizado
 ```bash
-docker exec -it backend_dose_certa-backend-1 alembic upgrade head
+docker exec -it backend_inaws_reviews_livros-backend-1 alembic upgrade head
 ```
 ### 2. Caso precise criar uma nova migração ao modificar os modelos:
 ```bash
