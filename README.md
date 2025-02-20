@@ -1,53 +1,70 @@
-# INAWS-Reviews-Livros-api
 
-## Descrição
-O projeto **Reviews-Livros** é uma aplicação onde qualquer usuário pode adicionar livros e avaliá-los 
+# Dose Certa API
 
-O projeto está sendo utilizado nas disciplinas de **Interface Homem-Máquina** e **Infraestrutura em Nuvem com AWS**.
+![Static Badge](https://img.shields.io/badge/any_text-3.12-blue?style=flat-square&label=Python&labelColor=%232daaff)
+![Static Badge](https://img.shields.io/badge/pypi-FastAPI%20v0.115.6-%23038C73?style=flat-square)
 
-### Autores
-- [@pachecorodr](https://github.com/pachecorodr)
+O projeto Dose Certa é uma aplicação de lembretes de remedios para pessoas que possuem dificuldades de lembrar dos horários das suas medicações. Essa API compoem o back-end da aplicação.
+
+Esse projeto esta sendo utilizando nas disciplinas de Interface Homem Máquina e Infraestrutura em Nuvem com AWS.
+
+## Autores
+
+- [@Maycon-M](https://github.com/Maycon-M)
 
 ## Variáveis de Ambiente
-Para rodar esse projeto localmente, você precisará adicionar as seguintes variáveis de ambiente no seu arquivo `.env`:
 
-- `POSTGRES_H`
-- `POSTGRES_USER`
-- `POSTGRES_PASSWORD`
-- `POSTGRES_DB`
-- `POSTGRES_PORT`
+Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
 
-## Rodando Localmente
+`POSTGRES_H`
 
-### 1. Clone o projeto
-```bash
-git clone https://github.com/pachecorodr/INAWS-Reviews-Livros-api.git 
-```
-### 2. Entre no diretório do projeto
-```bash
-cd INAWS-Reviews-Livros-api
-```
-### 3. Construa uma imagem a partir do docker-compose.yaml
-```bash
-docker-compose -f docker/docker-compose.yaml -p backend_dose_certa up --build
-```
-## Rodando as migrações do banco de dados
+`POSTGRES_USER`
 
-### 1. Após subir os containers, aplique as migrações para garantir que o banco esteja atualizado
+`POSTGRES_PASSWORD`
+
+`POSTGRES_DB`
+
+`POSTGRES_PORT`
+
+## Rodando localmente
+
+Clone o projeto
+
 ```bash
-docker exec -it backend_dose_certa-backend-1 alembic upgrade head
-```
-### 2. Caso precise criar uma nova migração ao modificar os modelos:
-```bash
-docker exec -it backend_dose_certa-backend-1 alembic revision --autogenerate -m "descrição da migração"
-docker exec -it backend_dose_certa-backend-1 alembic upgrade head
+  git clone https://github.com/Maycon-M/dose_certa_api.git
 ```
 
-## Documentação da API 
-A API possui documentação gerada pelo Swagger. Após construir a imagem no Docker, acesse a documentação em:
+Entre no diretório do projeto
 
-http://localhost:8000/docs
+```bash
+  cd dose_certa_api
+```
 
-## Relacionado 
+Construa uma imagem a partir do docker-compose.yaml
 
-Segue a API do projeto
+```bash
+  docker-compose -f docker/docker-compose.yaml -p backend_dose_certa up --build
+```
+
+### Rodando as migrações do banco de dados
+
+Após subir os containers, aplique as migrações para garantir que o banco esteja atualizado:
+
+```bash
+    docker exec -it backend_bookreviews-backend-1 alembic upgrade head
+```
+
+Caso precise criar uma nova migração ao modificar os modelos:
+
+```bash
+docker exec -it backend_bookreviews-backend-1 alembic revision --autogenerate -m "descrição da migração"
+docker exec -it backend_bookreviews-backend-1 alembic upgrade head
+```
+
+## Documentação da API
+
+A API possui Documentação feita com Swagger. Após construir a imagem no docker acesse:
+
+``` bash
+    http://localhost:8000/docs
+```
