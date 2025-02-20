@@ -39,8 +39,8 @@ docker exec -it backend_dose_certa-backend-1 alembic upgrade head
 ```
 ### 2. Caso precise criar uma nova migração ao modificar os modelos:
 ```bash
-docker exec -it backend_dose_certa-backend-1 alembic revision --autogenerate -m "descrição da migração"
-docker exec -it backend_dose_certa-backend-1 alembic upgrade head
+docker exec -it backend_inaws_reviews_livros-backend-1 alembic revision --autogenerate -m "descrição da migração"
+docker exec -it backend_inaws_reviews_livros-backend-1 alembic upgrade head
 ```
 
 ## Documentação da API 
